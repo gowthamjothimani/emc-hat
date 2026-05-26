@@ -1,0 +1,39 @@
+.pcba-assist-container {
+  width: 100%;
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.add-pcba-button {
+  padding: 60px 40px;
+  border: 2px dashed #dee2e6;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+  background: #f8f9fa;
+}
+
+.add-pcba-button:hover {
+  border-color: #0f3460;
+  background: #e8eef8;
+  transform: translateY(-2px);
+}
+
+.pcba-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .pcba-grid {
+    grid-template-columns: 1fr;
+  }
+}

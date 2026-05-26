@@ -1,0 +1,39 @@
+.main-layout-container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.main-layout-container > nav {
+  position: fixed;
+  width: 260px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 100;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 10px;
+  padding: 24px;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+}
+
+/* Ensure scrollbar styling */
+.main-layout-container > nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main-layout-container > nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-layout-container > nav::-webkit-scrollbar-thumb {
+  background: #4a4a5e;
+  border-radius: 3px;
+}
+
+.main-layout-container > nav::-webkit-scrollbar-thumb:hover {
+  background: #5a5a6e;
+}
