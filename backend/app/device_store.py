@@ -26,7 +26,10 @@ def get_all_devices():
     for d in DEVICES.values():
         delta = (now - d["last_seen"]).total_seconds()
         d["status"] = "OFFLINE" if delta > OFFLINE_TIMEOUT_SEC else "ONLINE"
-        devices.append(d)
+        # Convert datetime to ISO format string for JSON serialization
+        device_copy = d.copy()
+        device_copy["last_seen"] = d["last_seen"].isoformat()
+        devices.append(device_copy)
 
     return devices
 
